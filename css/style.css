@@ -3,15 +3,20 @@
 Шрифт для сайта
 font-family: 'PT Sans', sans-serif;
 */
+/*Стили для всей страницы*/
 body{
     font-family: 'PT Sans', sans-serif;
 }
+
+/*Стили для header*/
 header{
     padding-top: 30px;
 }
 .wrap {
     background: #ffffff;
     border-bottom: solid 1px #f3f3f3;
+    max-width: 1499px;
+    margin: auto;
 }
 .svg-img{
     margin-right:30px;
@@ -59,13 +64,34 @@ header{
     z-index: 1;
 }
 
+/*Стили для главного контента*/
 .main{
-    height: 2000px;;
+    padding-top: 50px;
 }
+.wrap-main{
+    padding-top: 110px;
+}
+.main .carousel-indicators {
+    bottom: -50px; /* Чем ниже индикаторы тем выше значение */
+}
+.main .carousel-indicators li{
+    border: 1px solid #f78f7d;
+}
+.main .carousel-indicators li.active{
+    background-color: #f78f7d;
+}
+.main .img-block{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+/* Стили для медиазапросов*/
 @media (max-width: 575.98px) {
     
 }
-
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
     

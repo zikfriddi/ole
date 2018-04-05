@@ -6,11 +6,25 @@ font-family: 'PT Sans', sans-serif;
 body{
     font-family: 'PT Sans', sans-serif;
 }
+header{
+    padding-top: 30px;
+}
 .wrap {
     background: #ffffff;
     border-bottom: solid 1px #f3f3f3;
 }
-
+.svg-img{
+    margin-right:30px;
+    height: 100px;
+}
+.phone{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+.phone > h5 .small{
+    font-size: .6em;
+}
 .navbar{
     text-transform: uppercase;
     background-color: #ffffff!important;
@@ -18,6 +32,69 @@ body{
 .navbar a{
     font-size: 16px;
 }
+.nav-item a.nav-link:hover,
+.active a.nav-link{
+    color: #f78f7d!important;
+}
 .navbar .navbar-brand{
-    margin: 0 0 10px 30px;
+    margin: 0 0 10px 0;
+}
+.navbar-nav li+li:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    right: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: #f78f7d;
+    border-radius: 50%;
+}
+.navbar-nav li {
+    position: relative;
+    display: block;
+    float: left;
+    z-index: 1;
+}
+
+.main{
+    height: 2000px;;
+}
+@media (max-width: 575.98px) {
+    
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    
+}
+@media (max-width: 992px){
+    .navbar-brand {
+        display: none;
+    }
+    .svg-img {
+        margin-right:0;
+    }
+    .phone{
+        display: none;
+    }
+    .navbar-nav li+li:before{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+}
+
+
+@media (min-width: 1200px) {
+    
 }

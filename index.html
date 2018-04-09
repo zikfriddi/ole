@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/slick.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="dist/js/jquery.js"></script>
-    <script src="dist/js/slick.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>OleFoto</title>
   </head>
@@ -147,29 +145,49 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-left">
+                    <div class="col">
                         <h3>Мы в Instagram</h3><br>
-                        <div class="slick_carusel">
-                            <img src="img/img-link-1.jpg" alt="">
-                            <img src="img/img-link-1.jpg" alt="">
-                            <img src="img/img-link-1.jpg" alt="">
+                        <div id="carousel_bottom" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col"><img class="d-block w-100" src="img/inst1.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst2.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst3.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst4.jpg" alt="Первый слайд"></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col"><img class="d-block w-100" src="img/inst1.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst4.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst3.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst2.jpg" alt="Первый слайд"></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col"><img class="d-block w-100" src="img/inst3.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst2.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst1.jpg" alt="Первый слайд"></div>
+                                        <div class="col"><img class="d-block w-100" src="img/inst4.jpg" alt="Первый слайд"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carousel_bottom" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel_bottom" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-    $('.slick_carusel').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 3,
-        dots: true,
-    });
-    </script>
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

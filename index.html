@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="dist/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/slick.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/slick.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>OleFoto</title>
   </head>
@@ -90,15 +93,81 @@
                     </div>
                 </div>
                 <div class="row img-block">
-                    <div class="col-4"><img src="img/img-link-1.jpg" alt=""></div>
-                    <div class="col-4"><img src="img/img-link-2.jpg" alt=""></div>
-                    <div class="col-4"><img src="img/img-link-3.jpg" alt=""></div>    
+                    <div class="col-12 col-md-4">
+                        <a href="#">
+                            <figure>
+                                <img src="img/img-link-1.jpg" alt="">
+                                <span>Фотозоны</span>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <a href="#">
+                            <figure>
+                                <img src="img/img-link-2.jpg" alt="">
+                                <span>Мероприятия</span>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <a href="#">
+                            <figure>
+                                <img src="img/img-link-3.jpg" alt="">
+                                <span>Реквизит</span>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <h3>Аренда фотостудии</h3><br>
+                        Вы можете арендовать студию для фотосессии малышей от 0 до 5 лет,
+                        а также для проведения мероприятий. Аренда студии включает в себя возможность использования любого реквизита в неограниченном количестве.
+                    </div>
+                </div>
+                <div class="row price-block">
+                    <div class="col">
+                        1 час = 1 600 ₽<br> 
+                        2 часа = 3 000 ₽<br>
+                        3 часа = 4 200 ₽<br>
+                        4 часа = 5 200 ₽<br>
+                        5 часов = 6 000 ₽<br>
+                        6 часов = 6 600 ₽<br>
+                        ***Абонемент***<br>
+                        10 часов = 7 000 ₽<br>
+                        Можно тратить частично в течение 30 дней<br>
+                        <p class="my_button"><a href="#">АРЕНДОВАТЬ</a></p>
+                            
+                    </div>
+                    <div class="col text-center">
+                        <img src="img/key.png" alt="ключ"><br>
+                        <h3>Хотите арендовать студию за 500 ₽/час<br> независимо от количества часов?</h3>
+                        <p class="my_button"><a href="#">ХОЧУ</a></p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <h3>Мы в Instagram</h3><br>
+                        <div class="slick_carusel">
+                            <img src="img/img-link-1.jpg" alt="">
+                            <img src="img/img-link-1.jpg" alt="">
+                            <img src="img/img-link-1.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <script>
+    $('.slick_carusel').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 3,
+        dots: true,
+    });
+    </script>
 
 
     <!-- Optional JavaScript -->

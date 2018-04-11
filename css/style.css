@@ -150,41 +150,56 @@ header{
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
-.slick_carusel{
-    height: auto;
-    max-width: 100%;
+
+/*Стили для карусели - нижний*/
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5%;
 }
-#wave {
-    position: relative;
-    height: 70px;
-    width: 100%;
-    background: #e0efe3;
-  }
-  #wave:before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 340px;
-    height: 80px;
-    background-color: white;
-    right: -5px;
-    top: 40px;
-  }
-  #wave:after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 300px;
-    height: 70px;
-    background-color: #e0efe3;
-    left: 0;
-    top: 27px;
-  }
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f78f7d' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")!important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f78f7d' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/*Стили для footer*/
+footer {
+    height: 100%;
+
+}
+
+footer .container-fluid {
+    margin-top: 110px;
+    color: white;
+    background: url("../img/bg_clouds.png") no-repeat center center;
+    background-size: auto 100%;
+}
+
+footer .soc {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+footer .soc a {
+    font-size: 50px;
+    color: #f69789;
+    padding: 0 15px;
+}
+footer .soc a:hover {
+    color: #f78f7d;
+}
+footer .tel {
+    padding-bottom: 30px;
+}
+footer .cop {
+    padding-bottom: 90px;
+}
 /* Стили для медиазапросов*/
 @media (max-width: 575.98px) {
-    
+    footer .container-fluid{
+        background-size: auto 100%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
@@ -206,7 +221,6 @@ header{
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    
 }
 
 
@@ -216,5 +230,5 @@ header{
 
 
 @media (min-width: 1200px) {
-    
+
 }

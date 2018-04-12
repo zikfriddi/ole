@@ -7,6 +7,9 @@ font-family: 'PT Sans', sans-serif;
 body{
     font-family: 'PT Sans', sans-serif;
 }
+.hidden-big{
+    display: none;
+}
 
 /*Стили для header*/
 header{
@@ -128,8 +131,16 @@ header{
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+/*
 .price-block img{
     margin: 60px 0px; 
+}*/
+.price-block .stars {
+    font-size: .8rem;
+    color: #f78f7d;
+}
+.price-block h6 span {
+    font-weight: bolder;
 }
 .my_button{
     margin-top: 30px;
@@ -138,7 +149,7 @@ header{
     cursor: pointer;
     font-size:15px;
     text-decoration: none;
-    padding:9px 51px;
+    padding:9px 30px;
     color:#f78f7d;
     background-color:#ffffff;
     border-radius:27px;
@@ -167,13 +178,9 @@ header{
 /*Стили для footer*/
 footer {
     height: 100%;
-
-}
-
-footer .container-fluid {
     margin-top: 110px;
     color: white;
-    background: url("../img/bg_clouds.png") no-repeat center center;
+    background: url("../img/bg_footer.svg") no-repeat center center;
     background-size: auto 100%;
 }
 
@@ -195,19 +202,65 @@ footer .tel {
 footer .cop {
     padding-bottom: 90px;
 }
+
 /* Стили для медиазапросов*/
 @media (max-width: 575.98px) {
-    footer .container-fluid{
-        background-size: auto 100%;
+    .img-block figure {
+        background: #ffffff;
+    }
+    
+    .img-block figure img {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        width: 60%;
+    
+    }
+    .price-block .col:first-child {
+        border: none;
+    }
+    .price-block .col-12 {
+        text-align: center!important;
+    }
+    .price-block img{
+        margin: 30px 0; 
     }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
+    .img-block figure {
+        background: #ffffff;
+    }
+    
+    .img-block figure img{
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        width: 60%;
+    
+    }
+    .price-block .col:first-child{
+        border: none;
+    }
+    .price-block .col-12 {
+        text-align: center!important;
+    }
+    .price-block img{
+        margin: 30px 0; 
+    }
     
 }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
 @media (max-width: 992px){
     .navbar-brand {
         display: none;
+    }
+    .hidden-big{
+        display: inline;
     }
     .svg-img {
         margin-right:0;
@@ -218,11 +271,38 @@ footer .cop {
     .navbar-nav li+li:before{
         display: none;
     }
+    .main .carousel-indicators {
+        bottom: -30px; /* Чем ниже индикаторы тем выше значение */
+    }
+    .carousel-indicators li {
+        width: 15px;
+        height: 3px;
+    }
+
+    
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
+    footer {
+        margin-top: 50px;
+    }
+    footer .soc {
+        padding-top: 3rem;
+        padding-bottom: .8rem;
+    }
+    footer .tel {
+        padding-bottom: 0;
+    }
+    footer .cop {
+        padding-bottom: 30px;
+    }
+    footer .soc a {
+        font-size: 2.5rem;
+    }
+    footer h5, footer h6 {
+        font-size: 1.1rem;
+    }
 }
-
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     
@@ -230,5 +310,5 @@ footer .cop {
 
 
 @media (min-width: 1200px) {
-
+    
 }

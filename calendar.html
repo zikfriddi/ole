@@ -89,69 +89,55 @@
                 </div>
             </div>
     </footer>
-<!--Модальный окна -->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="infoModalLabel">Как нас найти</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=mymaps%3A5LcxNLbRFudlO93on1Rl7c8LrMQGHN1R&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                </div>
-              </div>
-            </div>
-          </div>
-<!--Конец окон-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    -->
+    <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/moment.js"></script>
 	<script src="dist/js/jquery.eventCalendar.js"></script>
     <script>
-        $(function(){
-            var data = [
-                { "date": "2018-04-21 10:15:20", "title": "Событие 1", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-                { "date": "2018-09-21 10:15:20", "title": "Событие 2", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-                { "date": "2018-04-01 10:15:20", "title": "Событие 3", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-                { "date": "2018-10-21 10:15:20", "title": "Событие 4", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-                { "date": "2018-08-22 10:15:20", "title": "Событие 5", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" }];
-            $('#eventCalendar').eventCalendar({
-                jsonData: data,
-                jsonDateFormat: 'human',
-                startWeekOnMonday: false,
-                openEventInNewWindow: true,
-                dateFormat: 'DD-MM-YYYY',
-                showDescription: false,
-                locales: {
-                    locale: "ru",
-                    txt_noEvents: "Нет запланированных событий",
-                    txt_SpecificEvents_prev: "",
-                    txt_SpecificEvents_after: "события:",
-                    txt_NextEvents: "Следующие события:",
-                    txt_GoToEventUrl: "Смотреть",
-                    moment: {
-                        "months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-                        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-                        "monthsShort" : [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
-                        "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
-                        "weekdays" : [ "Воскресенье", "Понедельник","Вторник","Среда","Четверг",
-                        "Пятница","Суббота" ],
-                        "weekdaysShort" : [ "Вс","Пн","Вт","Ср","Чт",
-                        "Пт","Сб" ],
-                        "weekdaysMin" : [ "Вс","Пн","Вт","Ср","Чт",
-                        "Пт","Сб" ]
-                    }
-                }
-            });
-        });
+        
+	$(function(){
+		var data = [
+	{ "date": "2018-04-21 10:15:20", "title": "Событие 1", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
+	{ "date": "2018-04-21 10:15:20", "title": "Событие 2", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
+	{ "date": "2018-04-21 10:15:20", "title": "Событие 3", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
+	{ "date": "2018-05-01 10:15:20", "title": "Событие 4", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" }
+		];
+		$('#eventCalendar').eventCalendar({
+			jsonData: data,
+			eventsjson: 'data.json',
+			jsonDateFormat: 'human',
+			startWeekOnMonday: false,
+			openEventInNewWindow: true,
+			dateFormat: 'DD-MM-YYYY',
+			showDescription: false,
+			locales: {
+				locale: "ru",
+				txt_noEvents: "Нет запланированных событий",
+				txt_SpecificEvents_prev: "",
+				txt_SpecificEvents_after: "события:",
+				txt_NextEvents: "Следующие события:",
+				txt_GoToEventUrl: "Смотреть",
+				moment: {
+					"months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+					"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+					"monthsShort" : [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+					"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+					"weekdays" : [ "Воскресенье", "Понедельник","Вторник","Среда","Четверг",
+					"Пятница","Суббота" ],
+					"weekdaysShort" : [ "Вс","Пн","Вт","Ср","Чт",
+					"Пт","Сб" ],
+					"weekdaysMin" : [ "Вс","Пн","Вт","Ср","Чт",
+					"Пт","Сб" ]
+				}
+			}
+		});
+	});
+	
     </script>
   </body>
 </html>

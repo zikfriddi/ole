@@ -40,8 +40,10 @@ header{
 .navbar a {
     font-size: 16px;
 }
-.nav-item a.nav-link:hover,
-.active a.nav-link {
+.nav-item a.nav-link:hover {
+    color: #f78f7d!important;
+}
+.nav-item .nav-link.active{
     color: #f78f7d!important;
 }
 .navbar .navbar-brand {

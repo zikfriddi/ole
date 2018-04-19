@@ -66,7 +66,37 @@
     </header>
     <div class="main">
         <div class="container">
-            <div id="eventCalendar" style="width: 300px; margin: 50px auto;"></div>
+            <div class="row text-center">
+                <div class="col-12 col-md-6">
+                    <div id="eventCalendar"></div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Ваше&nbsp;имя</span>
+                            </div>
+                            <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
+                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Оле">
+                        </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Ваша&nbsp;Фамилия</span>
+                            </div>
+                            <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваша&nbsp;Фамилия</label>
+                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Лукойе">
+                        </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Ваш&nbsp;телефон</span>
+                            </div>
+                            <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваш&nbsp;телефон</label>
+                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="+7 900 0000000">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
         </div><!--конец div container-->
     </div><!--конец div main-->
     <footer>
@@ -102,10 +132,18 @@
         
 	$(function(){
 		var data = [
-	{ "date": "2018-04-21 10:15:20", "title": "Событие 1", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-	{ "date": "2018-04-21 10:15:20", "title": "Событие 2", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-	{ "date": "2018-04-21 10:15:20", "title": "Событие 3", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" },
-	{ "date": "2018-05-01 10:15:20", "title": "Событие 4", "description": "Анонс меоприятия", "url": "https://s-sd.ru/" }
+	{ "date": "2018-04-19 10:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+	{ "date": "2018-04-19 11:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+	{ "date": "2018-04-19 12:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-04-21 10:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 11:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 12:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 15:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 16:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 17:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 18:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 19:00:00", "title": "Время свободно", "description": "Можно его бронировать"},
+    { "date": "2018-05-02 20:00:00", "title": "Время свободно", "description": "Можно его бронировать"}
 		];
 		$('#eventCalendar').eventCalendar({
 			jsonData: data,
@@ -117,11 +155,12 @@
 			showDescription: false,
 			locales: {
 				locale: "ru",
-				txt_noEvents: "Нет запланированных событий",
-				txt_SpecificEvents_prev: "",
-				txt_SpecificEvents_after: "события:",
-				txt_NextEvents: "Следующие события:",
-				txt_GoToEventUrl: "Смотреть",
+				txt_noEvents: "Все время свободно",
+				txt_SpecificEvents_prev: "Расписание - ",
+				txt_SpecificEvents_after: ":",
+				txt_NextEvents: "Список свободного времени:",
+                txt_GoToEventUrl: "Смотреть",
+                txt_loading: "Загрузка...",
 				moment: {
 					"months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
 					"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],

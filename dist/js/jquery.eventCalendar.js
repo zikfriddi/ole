@@ -39,7 +39,7 @@
 	// define the parameters with the default values of the function
 	$.fn.eventCalendar.defaults = {
 	    eventsjson: 'js/events.json',
-		eventsLimit: 4,
+		eventsLimit: 3,
 		locales: {
 			locale: "en",
 			txt_noEvents: "There are no events in this period",
@@ -414,14 +414,16 @@
 									moment.locale(eventsOpts.locales.locale);
 									//eventStringDate = eventDay + "/" + eventMonthToShow + "/" + eventYear;
 									eventStringDate = moment(eventDate).format(eventsOpts.dateFormat);
-									var eventTitle;
+									/*var eventTitle;
 
 									if (event.url) {
 										eventTitle = '<a href="'+event.url+'" target="' + eventLinkTarget + '" class="eventCalendar-eventTitle">' + event.title + '</a>';
 									} else {
-										eventTitle = '<span class="eventCalendar-eventTitle">'+event.title+'</span>';
-									}
-									events.push('<li id="' + key + '" class="'+event.type+'"><time datetime="'+eventDate+'"><em>' + eventStringDate + '</em><small>'+eventHour+":"+eventMinute+'</small></time>'+eventTitle+'<p class="eventCalendar-eventDesc ' + eventDescClass + '">' + event.description + '</p></li>');
+
+										eventTitle = '<em class="eventCalendar-eventTitle">'+event.title+'</em>';
+									}*/
+									events.push('<li id="'+ key + '" class="list-group-item list-group-item-success">' + eventStringDate + '  ' + eventHour + ':' + eventMinute +'  '+ event.title + '</li>');
+									//events.push('<li id="' + key + '" class="'+event.type+'"><time datetime="'+eventDate+'"><em>' + eventStringDate + '</em><small>'+eventHour+":"+eventMinute+'</small>'+eventTitle+'</time></li>');
 									i++;
 								}
 						}

@@ -41,8 +41,8 @@
 	}
 		.eventCalendar-currentTitle {
 			line-height:35px;
-			background-color:#33a7b5;
-			outline:1px solid #33a7b5;
+			background-color:#ffa585;
+			outline:1px solid #ffa585;
 		}
 			.eventCalendar-currentTitle .eventCalendar-monthTitle {
 				font-size:120%;
@@ -109,7 +109,7 @@
 				}
 			.eventCalendar-daysList li.today a {
 				color:#fff;
-				background:#33a7b5;
+				background:#325d7e;
 			/*	box-shadow:inset 5px 5px 10px #777;
 				text-shadow: 2px 2px 2px #777;*/
 			}
@@ -119,11 +119,11 @@
 				}
 
 			.eventCalendar-daysList li.eventCalendar-dayWithEvents a {
-				background:#f77a11;
+				background:#ffa585;
 				color:#fff;
 			}
 				li.eventCalendar-day.eventCalendar-dayWithEvents a:hover {
-					background-color:#f9a45d;
+					background-color:#f78f7d;
 				}
 
 

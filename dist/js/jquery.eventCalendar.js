@@ -422,7 +422,7 @@
 
 										eventTitle = '<em class="eventCalendar-eventTitle">'+event.title+'</em>';
 									}*/
-									events.push('<li id="'+ key + '" class="list-group-item list-group-item-success">' + eventStringDate + '  ' + eventHour + ':' + eventMinute +'  '+ event.title + '</li>');
+									events.push('<li id="'+ key + '" class="list-group-ite">' + eventStringDate + '  ' + eventHour + ':' + eventMinute +'  '+ event.title + '</li>');
 									//events.push('<li id="' + key + '" class="'+event.type+'"><time datetime="'+eventDate+'"><em>' + eventStringDate + '</em><small>'+eventHour+":"+eventMinute+'</small>'+eventTitle+'</time></li>');
 									i++;
 								}

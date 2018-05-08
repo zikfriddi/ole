@@ -66,6 +66,17 @@
     </header>
     <div class="main">
         <div class="container">
+            <div class="row text-block">
+                <div class="col">
+                    <p class="lead">На этой странице вы можете забронировать аренду нашей фотостудии: для частной фотосъёмки или проведения фотомероприятия, 
+                        для проведения Дня Рождения, под встречу Вашего клуба или под мастер-класс.</p>
+                    <p class="lead">Под календарем при выборе определенного дня Вы видите доступное свободное время в нашем расписании.</p>
+                    <p class="lead">Обратите внимание, что по правилам нашей фотостудии переносить или отменять бронь фотостудии можно не позднее чем за 48 часов до забронированного времени. 
+                        В случае переноса или отказа от аренды и забронированного времени менее чем за 48 часов до начала забронированного времени предоплата не возвращается.</p>
+                    <p class="lead">Все риски по личным или  семейным обстоятельствам, а также дорожной обстановке и прочим форс-мажорам, 
+                        которые препятствуют использованию забронированного времени, гость студии берет на себя.</p> 
+                </div>
+            </div>
             <div class="row text-center">
                 <div class="col-12 col-md-6">
                     <div class="main-cal">
@@ -86,29 +97,37 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <form>
-                        <div class="input-group mb-4">
+                        <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Ваше&nbsp;имя</span>
+                                <span class="input-group-text" placeholder="Оле" aria-label="Оле" id="inputGroup-sizing-default">Ваше&nbsp;имя</span>
                             </div>
                             <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
                             <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Оле">
                         </div>
-                        <div class="input-group mb-4">
-                            <div class="input-group-prepend">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Лукойе" aria-label="Лукойе" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Ваша&nbsp;Фамилия</span>
                             </div>
-                            <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваша&nbsp;Фамилия</label>
-                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Лукойе">
                         </div>
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Ваш&nbsp;телефон</span>
                             </div>
                             <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваш&nbsp;телефон</label>
-                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="+7 900 0000000">
+                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Например: +7 (473) 232-31-07">
                         </div>
-                        <button type="submit" class="btn btn-primary">Отправить</button>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">С условиями согласен</label>
+                            </div>
+                        <p class="my_button key"><a href="#">Отправить</a></p>
                     </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                        Перед бронированием фотостудии обязательно ознакомься с правилами аренды и посещения фотостудии!
                 </div>
             </div>
         </div><!--конец div container-->
@@ -135,11 +154,11 @@
     </footer>
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS 
+        <script src="dist/js/jquery.min.js"></script>
     -->
-
-    <script src="dist/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="dist/js/jquery.calendario.js"></script>
     <script type="text/javascript" src="dist/js/data.js"></script>
     <script type="text/javascript">	
@@ -159,7 +178,9 @@
 
                         if( $contentEl.length > 0 ) {
                             showEvents( $contentEl, dateProperties );
-                        } else {alert('Test')}
+                        } else {
+                            showEventsEmpty( $contentEl, dateProperties );
+                        }
 
                     },
                     caldata : codropsEvents,
@@ -185,13 +206,28 @@
 
                 hideEvents();
                 
-                var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>Events for ' + dateProperties.monthname + ' ' + dateProperties.day + ', ' + dateProperties.year + '</h4></div>' ),
+                var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>Расписания на ' + dateProperties.monthname + ' ' + dateProperties.day + ', ' + dateProperties.year + '</h4></div>' ),
                     $close = $( '<span class="custom-content-close"></span>' ).on( 'click', hideEvents );
 
                 $events.append( $contentEl.html() , $close ).insertAfter( $wrapper );
                 
                 setTimeout( function() {
                     $events.css( 'top', '0%' );
+                }, 25 );
+
+            }
+            // При нажатиии на незапланированный день
+            function showEventsEmpty( $contentEl, dateProperties ) {
+
+                hideEvents();
+
+                var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>Расписания на ' + dateProperties.monthname + ' ' + dateProperties.day + ', ' + dateProperties.year + '</h4></div>' ),
+                    $close = $( '<span class="custom-content-close"></span>' ).on( 'click', hideEvents );
+
+                $events.append( '<span>Вы можете забронировать удобное для Вас время с 9:00 до 21:00</span>' , $close ).insertAfter( $wrapper );
+
+                setTimeout( function() {
+                $events.css( 'top', '0%' );
                 }, 25 );
 
             }

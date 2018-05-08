@@ -104,7 +104,8 @@ header{
     width: 100%;
 
 }
-.img-block figure:hover img {
+.img-block figure:hover img,
+.img-block figure img.active {
     opacity: .6;
 }
 
@@ -147,6 +148,11 @@ header{
 .price-block span {
     font-weight: bolder;
 }
+.price-block.club{
+    padding: 0px;
+    padding-left: 20px;
+    border-left: solid 2px #f78f7d;
+}
 .my_button.price {
     margin-top: 50px;
 }
@@ -188,17 +194,6 @@ header{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f78f7d' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-/* Стили для календаря */
-#eventCalendar{
-    width: 400px; 
-    margin: 0 auto;
-}
-.input-group-text {
-    background-color: #b9b9b9;
-    border: 1px solid #b9b9b9;
-    color: #fff;
-}
-
 /*Стили для footer*/
 footer {
     height: 390px;
@@ -227,6 +222,16 @@ footer .cop {
     padding-bottom: 50px;
 }
 
+/*Стили для станицы клуба*/
+
+.club-list{
+    font-size: 1.2rem;
+}
+.club-list .fa-star{
+    color: #ffa585;
+    font-size: 1.3em;
+    padding: 10px 20px 10px 0px;
+}
 /* Стили для медиазапросов*/
 @media (max-width: 767.98px) {
     header {

@@ -45,7 +45,7 @@
                     <a class="navbar-brand align-self-center" href="index.html"><img src="img/logo-text.svg" height="20" alt="Оле Лукое"></a>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                             <a class="nav-link" href="club.html">Клуб</a>
+                             <a class="nav-link" href="club-cl.html">Клуб</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="store.html">Магазин</a>
@@ -67,14 +67,9 @@
     <div class="main">
         <div class="container">
             <div class="row text-block">
-                <div class="col">
-                    <p class="lead">На этой странице вы можете забронировать аренду нашей фотостудии: для частной фотосъёмки или проведения фотомероприятия, 
-                        для проведения Дня Рождения, под встречу Вашего клуба или под мастер-класс.</p>
-                    <p class="lead">Под календарем при выборе определенного дня Вы видите доступное свободное время в нашем расписании.</p>
-                    <p class="lead">Обратите внимание, что по правилам нашей фотостудии переносить или отменять бронь фотостудии можно не позднее чем за 48 часов до забронированного времени. 
-                        В случае переноса или отказа от аренды и забронированного времени менее чем за 48 часов до начала забронированного времени предоплата не возвращается.</p>
-                    <p class="lead">Все риски по личным или  семейным обстоятельствам, а также дорожной обстановке и прочим форс-мажорам, 
-                        которые препятствуют использованию забронированного времени, гость студии берет на себя.</p> 
+                <div class="col text-center">
+                    <p class="lead">На этой странице вы можете забронировать аренду нашей фотостудии:</p> 
+                    <small>для частной фотосъёмки или проведения фотомероприятия, для проведения Дня Рождения, под встречу Вашего клуба или под мастер-класс</small>
                 </div>
             </div>
             <div class="row text-center">
@@ -95,31 +90,66 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 form-block">
                     <form>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" placeholder="Оле" aria-label="Оле" id="inputGroup-sizing-default">Ваше&nbsp;имя</span>
+                                <span class="input-group-text" placeholder="Оле" aria-label="Оле">Ваше&nbsp;имя</span>
                             </div>
-                            <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
-                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Оле">
+                            <label for="cl-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
+                            <input type="text" class="form-control" id="cl-name" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Оле">
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Лукойе" aria-label="Лукойе" aria-describedby="basic-addon2">
+                            <label for="cl-last-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
+                            <input type="text" class="form-control" id="cl-last-name" placeholder="Лукойе" aria-label="Лукойе" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Ваша&nbsp;Фамилия</span>
+                                <span class="input-group-text">Ваша&nbsp;Фамилия</span>
                             </div>
                         </div>
-                        <div class="input-group mb-4">
+                        <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Ваш&nbsp;телефон</span>
+                                <span class="input-group-text">Ваш&nbsp;телефон</span>
                             </div>
-                            <label for="clien-name" class="col-sm-4 col-form-label sr-only">Ваш&nbsp;телефон</label>
-                            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Например: +7 (473) 232-31-07">
+                            <label for="cl-phone" class="col-sm-4 col-form-label sr-only">Ваш&nbsp;телефон</label>
+                            <input type="text" class="form-control" id="cl-phone" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="+7 (473) 232-31-07">
                         </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">С условиями согласен</label>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="cl-clock">
+                                <option selected>Выберите...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="1">4</option>
+                                <option value="2">5</option>
+                                <option value="3">6</option>
+                                <option value="2">7</option>
+                                <option value="3">8</option>
+                            </select>
+                             <div class="input-group-append">
+                                <label class="input-group-text" for="cl-clock">Количество часов</label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Выберите дату</span>
+                            </div>
+                            <label for="cl-date" class="col-sm-4 col-form-label sr-only">Выберите дату</label>
+                            <input type="date" class="form-control" id="cl-date" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="дд.мм.гггг">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Выберите время</span>
+                            </div>
+                            <label for="cl-time" class="col-sm-4 col-form-label sr-only">Выберите время</label>
+                            <input type="time" class="form-control" id="cl-time" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="чч.мм">
+                        </div>
+                        <div class="form-group">
+                            <label for="cl-prim">Примечание</label>
+                            <textarea class="form-control" id="cl-prim" rows="3"></textarea>
+                        </div>
+                        <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cl-uslov">
+                                <label class="form-check-label" for="cl-uslov">С условиями согласен</label>
                             </div>
                         <p class="my_button key"><a href="#">Отправить</a></p>
                     </form>
@@ -127,7 +157,12 @@
             </div>
             <div class="row">
                 <div class="col">
-                        Перед бронированием фотостудии обязательно ознакомься с правилами аренды и посещения фотостудии!
+                        <small>В календаре при выборе определенного дня Вы видите доступное свободное время в нашем расписании.
+                        Обратите внимание, что по <a href="#">правилам нашей фотостудии</a> переносить или отменять бронь фотостудии можно не позднее чем за 48 часов до забронированного времени. 
+                        В случае переноса или отказа от аренды и забронированного времени менее чем за 48 часов до начала забронированного времени предоплата не возвращается.<br>
+                        Все риски по личным или  семейным обстоятельствам, а также дорожной обстановке и прочим форс-мажорам, 
+                        которые препятствуют использованию забронированного времени, гость студии берет на себя.
+                        Перед бронированием фотостудии обязательно ознакомься с правилами аренды и посещения фотостудии!</small>
                 </div>
             </div>
         </div><!--конец div container-->

@@ -244,7 +244,13 @@ footer .cop {
         opacity: 1;
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out;
-        width: 60%;
+        width: 70%;
+    }
+    .img-block.club-img-block figure img{
+        width: 100%;
+    }
+    .img-block.club-img-block figure span {
+        font-size: 1.5rem;
     }
     .price-block .col-12:first-child {
         border: none;

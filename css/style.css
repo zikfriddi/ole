@@ -10,7 +10,9 @@ body{
 .hidden-big{
     display: none;
 }
-
+.my-img-widh-100{
+    max-width: 100%;
+}
 /*Стили для header*/
 header{
     padding-top: 30px;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="dist/js/modernizr.custom.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>OleFoto</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="rent.html">Аренда<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.html#rent">Аренда<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="holiday.html">Организация&nbsp;праздников</a>
@@ -91,17 +92,17 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 form-block">
-                    <form>
+                    <form method="post" id="form" action="form.php">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" placeholder="Оле" aria-label="Оле">Ваше&nbsp;имя</span>
                             </div>
                             <label for="cl-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
-                            <input type="text" class="form-control" id="cl-name" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Оле">
+                            <input type="text" class="form-control" name="cl-name" id="cl-name" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Оле">
                         </div>
                         <div class="input-group mb-3">
                             <label for="cl-last-name" class="col-sm-4 col-form-label sr-only">Ваше&nbsp;имя</label>
-                            <input type="text" class="form-control" id="cl-last-name" placeholder="Лукойе" aria-label="Лукойе" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" name="cl-last-name" id="cl-last-name" placeholder="Лукойе" aria-label="Лукойе" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <span class="input-group-text">Ваша&nbsp;Фамилия</span>
                             </div>
@@ -111,10 +112,17 @@
                                 <span class="input-group-text">Ваш&nbsp;телефон</span>
                             </div>
                             <label for="cl-phone" class="col-sm-4 col-form-label sr-only">Ваш&nbsp;телефон</label>
-                            <input type="text" class="form-control" id="cl-phone" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="+7 (473) 232-31-07">
+                            <input type="text" class="form-control" name="cl-phone" id="cl-phone" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="+7 (473) 232-31-07">
                         </div>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="cl-clock">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Ваш&nbsp;email</span>
+                                </div>
+                                <label for="cl-mail" class="col-sm-4 col-form-label sr-only">Ваш&nbsp;email</label>
+                                <input type="text" class="form-control" name="cl-mail" id="cl-mail" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="ole@foto.ru">
+                            </div>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" name="cl-clock" id="cl-clock">
                                 <option selected>Выберите...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -134,24 +142,28 @@
                                 <span class="input-group-text">Выберите дату</span>
                             </div>
                             <label for="cl-date" class="col-sm-4 col-form-label sr-only">Выберите дату</label>
-                            <input type="date" class="form-control" id="cl-date" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="дд.мм.гггг">
+                            <input type="date" class="form-control" name="cl-date" id="cl-date" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="дд.мм.гггг">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Выберите время</span>
                             </div>
                             <label for="cl-time" class="col-sm-4 col-form-label sr-only">Выберите время</label>
-                            <input type="time" class="form-control" id="cl-time" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="чч.мм">
+                            <input type="time" class="form-control" name="cl-time" id="cl-time" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="чч.мм">
                         </div>
                         <div class="form-group">
                             <label for="cl-prim">Примечание</label>
-                            <textarea class="form-control" id="cl-prim" rows="3"></textarea>
+                            <textarea class="form-control" name="cl-prim" id="cl-prim" rows="3"></textarea>
                         </div>
                         <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="cl-uslov">
-                                <label class="form-check-label" for="cl-uslov">С условиями согласен</label>
-                            </div>
-                        <p class="my_button key"><a href="#">Отправить</a></p>
+                            <input class="form-check-input" type="checkbox" name="cl-uslov" id="cl-uslov">
+                            <label class="form-check-label" for="cl-uslov">С условиями согласен</label>
+                        </div>
+                        <br>
+                        <div class="g-recaptcha" data-sitekey="6Lf3jEYUAAAAAEe75xAWd5ScygQVgYGEYJqUbAwi"></div>
+                        <br>
+                        <button type="submit" class="btn btn-success botton-modal">Отправить</button>
+                        <!--<p class="my_button key"><a href="#">Отправить</a></p>-->
                     </form>
                 </div>
             </div>
@@ -196,6 +208,21 @@
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="dist/js/jquery.calendario.js"></script>
     <script type="text/javascript" src="dist/js/data.js"></script>
+    <script type="text/javascript">
+        $(document).ready( function(){
+            $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
+                    var form_data = $(this).serialize(); //собераем все данные из формы
+                    $.ajax({
+                    type: "POST", //Метод отправки
+                    url: "form.php", //путь до php фаила отправителя
+                    data: form_data,
+                    success: function() {
+                           //код в этом блоке выполняется при успешной отправке сообщения
+                           alert("Ваше сообщение отпрвлено!")}
+                    });
+            });
+        });    
+    </script>
     <script type="text/javascript">	
         $(function() {
             var transEndEventNames = {
